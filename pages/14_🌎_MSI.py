@@ -14,7 +14,7 @@ from imagery.imagery_files import get_available_layers
 from imagery.display_map import display_map
 from imagery.stats import get_stats
 
-index: Final = "cdom"
+index: Final = "msi"
 
 
 @st.cache_data
@@ -37,7 +37,7 @@ def get_legend_cache():
     return get_legend_colormap()
 
 
-st.title("Colored Dissolved Organic Matter")
+st.title("Moisture Stress Index")
 
 st.text("Hello Word")
 st.line_chart(get_stats_cache()[index])

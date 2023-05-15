@@ -3,11 +3,9 @@ import json
 import leafmap.foliumap as leafmap
 from streamlit_folium import st_folium
 
+
 def display_map(map_secrets, layer_name, layer_url, colors):
-    m = leafmap.Map(
-        minimap_control=True,
-        layers_control = True
-    )
+    m = leafmap.Map(minimap_control=True, layers_control=True)
 
     m.add_cog_layer(
         layer_url,
@@ -17,6 +15,8 @@ def display_map(map_secrets, layer_name, layer_url, colors):
         bidx=1,
         rescale="0,255",
     )
+
+    m.add_layer_control()
 
     folium_map = st_folium(
         m,
