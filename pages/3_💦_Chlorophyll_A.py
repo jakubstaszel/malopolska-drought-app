@@ -39,11 +39,14 @@ def get_legend_cache():
 
 st.title("Chlorophyll A")
 
-st.text("Hello Word")
+st.write(
+    "Chlorophyll A, which is the most common form of chlorophyll, is a photosynthetically active compound that converts light into energy through the process of photosynthesis. It is present in all plants, algae, and cyanobacteria. It is used as a parameter to assess the trophism of water bodies, biological activity, and the state of ecosystem integrity."
+)
+st.subheader("Chlorophyll A Statistics Across Time")
 st.line_chart(get_stats_cache()[index])
 
 if not "map_secrets" in st.session_state:
-    st.session_state["map_secrets"] = {"coords": [49.8663, 20.1654], "zoom": 9}
+    st.session_state["map_secrets"] = {"coords": [49.73907, 20.68443], "zoom": 12}
     st.session_state["map_secrets_new"] = st.session_state.map_secrets
 
 available_layers = get_layers_cache()[index]
@@ -52,6 +55,7 @@ layers = list(available_layers.keys())
 if not "layer" in st.session_state:
     st.session_state["layer"] = layers[len(layers) - 1]
 
+st.subheader("Chlorophyll A Spatial Variability")
 widget = st.empty()
 
 if st.button("Next layer"):
@@ -85,3 +89,4 @@ with row1_col1:
 
 with row1_col2:
     st.write(get_legend_cache()[index])
+    st.write("Chlorophyll A [mg/m3]")

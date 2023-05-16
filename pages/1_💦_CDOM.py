@@ -39,11 +39,14 @@ def get_legend_cache():
 
 st.title("Colored Dissolved Organic Matter")
 
-st.text("Hello Word")
+st.write(
+    "Colourful Dissolved Organic Matter (CDOM) is a water quality parameter that examines optically active organic matter. The value of this parameter depends on two sources of organic matter. The first is the material that develops inside the reservoir (e.g. phytoplankton), and the second is the matter originating from the outside (e.g. coal leaked from the soil). Studies show that the second source is dominant (Sobek et al., 2007). Photo- and biodegradation of organic matter can lead to increased CO2 values ​​in lake systems (Tranvik et al., 2009). CDOM also regulates the amount of light available for net primary production and trophic structure. It has also been shown that, for rivers, there is a correlation between content of methylmercury and CDOM (Fichot et al., 2015)."
+)
+st.subheader("CDOM Statistics Across Time")
 st.line_chart(get_stats_cache()[index])
 
 if not "map_secrets" in st.session_state:
-    st.session_state["map_secrets"] = {"coords": [49.8663, 20.1654], "zoom": 9}
+    st.session_state["map_secrets"] = {"coords": [49.73907, 20.68443], "zoom": 12}
     st.session_state["map_secrets_new"] = st.session_state.map_secrets
 
 available_layers = get_layers_cache()[index]
@@ -52,6 +55,7 @@ layers = list(available_layers.keys())
 if not "layer" in st.session_state:
     st.session_state["layer"] = layers[len(layers) - 1]
 
+st.subheader("CDOM Spatial Variability")
 widget = st.empty()
 
 if st.button("Next layer"):
@@ -85,3 +89,4 @@ with row1_col1:
 
 with row1_col2:
     st.write(get_legend_cache()[index])
+    st.write("CDOM [mg/l]")
