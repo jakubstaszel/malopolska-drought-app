@@ -1,13 +1,7 @@
-import json
 from typing import Final
-
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib as mpl
 
 import streamlit as st
 import leafmap.foliumap as leafmap
-from streamlit_folium import st_folium
 
 from imagery.colormaps import get_colormap, get_legend_colormap
 from imagery.imagery_files import get_available_layers
@@ -84,8 +78,6 @@ with row1_col1:
             "coords": [map["center"]["lat"], map["center"]["lng"]],
             "zoom": map["zoom"],
         }
-
-    # st.write(map)
 
 with row1_col2:
     st.write(get_legend_cache()[index])
