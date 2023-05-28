@@ -8,9 +8,10 @@ from imagery.imagery_files import get_available_layers
 from imagery.display_map import display_map
 from imagery.stats import get_stats
 
-index: Final = "NDVI"
+index: Final = "ndvi"
 title: Final = "Normalized Difference Vegetation Index"
 index_name: Final = "NDVI"
+
 
 @st.cache_data
 def get_stats_cache():
