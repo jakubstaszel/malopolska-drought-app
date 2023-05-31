@@ -3,7 +3,7 @@ import streamlit as st
 from imagery.stats import get_means_normalized
 
 
-@st.cache_data
+st.cache_data(ttl=3600)
 def get_means_normalized_cache():
     return get_means_normalized()
 
