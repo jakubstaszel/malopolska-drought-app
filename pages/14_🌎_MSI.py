@@ -35,7 +35,7 @@ def get_legend_cache():
 st.title(title)
 
 st.write(
-    "Dissolved Organic Carbon (DOC) significantly affects the structure and functions of lake ecosystems. There are similar sources of organic carbon as for the CDOM. Due to the dark colour of most DOC particles, it affects thermal structure of reservoirs and becomes a driver in water mixing. Organic carbon’s absorption properties make photosynthesis more difficult, it protects elements of the ecosystem against harmful UV radiation. DOC can also affect the fate of other dissolved substances (e.g. metals). The range of DOC effects on the water ecosystem is so large that it has a  great interest among researchers (Sobek et al., 2007)."
+    "MSI can be utilized for assessing soil moisture during drought conditions and serves as a reliable indicator for agricultural drought. It ranges from 0 to 4. As the index value increases, the level of water stress associated with drought also increases."
 )
 st.subheader(f"{index_name} Statistics Across Time")
 st.line_chart(get_stats_cache()[index])

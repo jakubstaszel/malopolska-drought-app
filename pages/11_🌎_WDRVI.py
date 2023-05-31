@@ -35,7 +35,7 @@ def get_legend_cache():
 st.title(title)
 
 st.write(
-    "Dissolved Organic Carbon (DOC) significantly affects the structure and functions of lake ecosystems. There are similar sources of organic carbon as for the CDOM. Due to the dark colour of most DOC particles, it affects thermal structure of reservoirs and becomes a driver in water mixing. Organic carbon’s absorption properties make photosynthesis more difficult, it protects elements of the ecosystem against harmful UV radiation. DOC can also affect the fate of other dissolved substances (e.g. metals). The range of DOC effects on the water ecosystem is so large that it has a  great interest among researchers (Sobek et al., 2007)."
+    "WDRVI utilizes the same spectral bands as NDVI, but it applies a weighting factor specifically for the near-infrared band. The sensitivity of WDRVI to Leaf Area Index (LAI), ranging from 2 to 6, is at least three times higher than the sensitivity of NDVI. The expanded dynamic range enables a more robust assessment of the physiological and phenological characteristics of vegetation."
 )
 st.subheader(f"{index_name} Statistics Across Time")
 st.line_chart(get_stats_cache()[index])

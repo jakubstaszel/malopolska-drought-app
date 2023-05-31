@@ -35,7 +35,7 @@ def get_legend_cache():
 st.title(title)
 
 st.write(
-    "Dissolved Organic Carbon (DOC) significantly affects the structure and functions of lake ecosystems. There are similar sources of organic carbon as for the CDOM. Due to the dark colour of most DOC particles, it affects thermal structure of reservoirs and becomes a driver in water mixing. Organic carbon’s absorption properties make photosynthesis more difficult, it protects elements of the ecosystem against harmful UV radiation. DOC can also affect the fate of other dissolved substances (e.g. metals). The range of DOC effects on the water ecosystem is so large that it has a  great interest among researchers (Sobek et al., 2007)."
+    "NMDI is used to determine soil moisture and addresses issues with the soil reflectance factor encountered in other vegetation condition-based indices (e.g., NDWI version 1, NDVI). For sparsely vegetated areas, NMDI values ≥ 0.7 indicate dry soil, values ranging from 6.0 to 7.0 indicate soil with average moisture, and values < 0.6 indicate wet soil. However, in densely vegetated areas, the NMDI behaves similarly to NDWI version 1. The NDVI index, with a threshold value of 0.4, can be used to distinguish vegetation coverage levels, and the NMDI index can also be used for fire detection."
 )
 st.subheader(f"{index_name} Statistics Across Time")
 st.line_chart(get_stats_cache()[index])

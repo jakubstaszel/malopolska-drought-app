@@ -36,7 +36,7 @@ def get_legend_cache():
 st.title(title)
 
 st.write(
-    "Dissolved Organic Carbon (DOC) significantly affects the structure and functions of lake ecosystems. There are similar sources of organic carbon as for the CDOM. Due to the dark colour of most DOC particles, it affects thermal structure of reservoirs and becomes a driver in water mixing. Organic carbon’s absorption properties make photosynthesis more difficult, it protects elements of the ecosystem against harmful UV radiation. DOC can also affect the fate of other dissolved substances (e.g. metals). The range of DOC effects on the water ecosystem is so large that it has a  great interest among researchers (Sobek et al., 2007)."
+    "NDVI is used to assess vegetation cover, higher NDVI values indicate better vegetation quality. It is one of the most widely used vegetation indices. Values below 0 typically correspond to water surfaces, values close to 0 are often associated with rocks, sand, or asphalt, and values above 0 represent vegetation. NDVI is created using bands of near-infrared and red visible light."
 )
 st.subheader(f"{index_name} Statistics Across Time")
 st.line_chart(get_stats_cache()[index])

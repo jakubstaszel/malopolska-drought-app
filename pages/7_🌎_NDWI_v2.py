@@ -35,7 +35,7 @@ def get_legend_cache():
 st.title(title)
 
 st.write(
-    "Dissolved Organic Carbon (DOC) significantly affects the structure and functions of lake ecosystems. There are similar sources of organic carbon as for the CDOM. Due to the dark colour of most DOC particles, it affects thermal structure of reservoirs and becomes a driver in water mixing. Organic carbon’s absorption properties make photosynthesis more difficult, it protects elements of the ecosystem against harmful UV radiation. DOC can also affect the fate of other dissolved substances (e.g. metals). The range of DOC effects on the water ecosystem is so large that it has a  great interest among researchers (Sobek et al., 2007)."
+    "NDWI version 2 is used for detecting water-covered surfaces. The index is calculated based on the green visible light band and near-infrared (NIR) band. The chosen wavelength ranges allow for the maximization of water surface reflectance in the first mentioned band, while minimizing the reflectance from water surfaces and maximizing the reflectance from vegetated surfaces in the second band. The index ranges from -1 to 1. Smaller values indicate areas with healthier vegetation coverage, while higher values indicate a higher likelihood of water surfaces. A threshold value of 0 can be used as a boundary."
 )
 st.subheader(f"{index_name} Statistics Across Time")
 st.line_chart(get_stats_cache()[index])
