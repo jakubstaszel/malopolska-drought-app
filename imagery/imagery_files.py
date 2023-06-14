@@ -21,6 +21,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi1_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi1_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi1_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi1_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi1_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "ndwi2": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi2_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -43,6 +45,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi2_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi2_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi2_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi2_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndwi2_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "nmdi": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/nmdi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -65,6 +69,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/nmdi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/nmdi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/nmdi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/nmdi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/nmdi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "ndmi": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/ndmi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -87,6 +93,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndmi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/ndmi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/ndmi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/ndmi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndmi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "ndvi": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/ndvi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -109,6 +117,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndvi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/ndvi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/ndvi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/ndvi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/ndvi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "wdrvi": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/wdrvi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -131,6 +141,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/wdrvi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/wdrvi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/wdrvi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/wdrvi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/wdrvi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "evi": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/evi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -153,6 +165,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/evi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/evi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/evi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/evi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/evi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "msavi2": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/msavi2_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -175,6 +189,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/msavi2_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/msavi2_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/msavi2_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/msavi2_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/msavi2_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
         "msi": {
             "2018-04-20": "https://magisterkacog.blob.core.windows.net/cogs3/msi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_classified.tif",
@@ -197,6 +213,8 @@ def get_available_layers():
             "2022-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/msi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_classified.tif",
             "2022-08-27": "https://magisterkacog.blob.core.windows.net/cogs3/msi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_classified.tif",
             "2022-10-31": "https://magisterkacog.blob.core.windows.net/cogs3/msi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_classified.tif",
+            "2023-04-23": "https://magisterkacog.blob.core.windows.net/cogs3/msi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_classified.tif",
+            "2023-06-03": "https://magisterkacog.blob.core.windows.net/cogs3/msi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_classified.tif",
         },
     }
 
