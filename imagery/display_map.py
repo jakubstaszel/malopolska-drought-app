@@ -33,10 +33,17 @@ def display_map(map_secrets, layer_name, layer_url, colors):
 
     return folium_map
 
-def display_map_swipe(map_secrets, layer1_name, layer2_name, layer1_url, layer2_url, colors):
+
+def display_map_swipe(
+    map_secrets, layer1_name, layer2_name, layer1_url, layer2_url, colors, key
+):
     m = folium.plugins.DualMap(tiles="openstreetmap")
-    tile_url_1 = cog_tile(layer1_url, colormap=f"{json.dumps(colors)}", rescale="0,255", bidx=1, nodata=0)
-    tile_url_2 = cog_tile(layer2_url, colormap=f"{json.dumps(colors)}", rescale="0,255", bidx=1, nodata=0)
+    tile_url_1 = cog_tile(
+        layer1_url, colormap=f"{json.dumps(colors)}", rescale="0,255", bidx=1, nodata=0
+    )
+    tile_url_2 = cog_tile(
+        layer2_url, colormap=f"{json.dumps(colors)}", rescale="0,255", bidx=1, nodata=0
+    )
 
     folium.raster_layers.TileLayer(
         tiles=tile_url_1,
@@ -45,7 +52,7 @@ def display_map_swipe(map_secrets, layer1_name, layer2_name, layer1_url, layer2_
         overlay=True,
         control=True,
         show=True,
-        opacity=1.0
+        opacity=1.0,
     ).add_to(m.m1)
 
     folium.raster_layers.TileLayer(
@@ -55,7 +62,7 @@ def display_map_swipe(map_secrets, layer1_name, layer2_name, layer1_url, layer2_
         overlay=True,
         control=True,
         show=True,
-        opacity=1.0
+        opacity=1.0,
     ).add_to(m.m2)
 
     folium_map = st_folium(
@@ -64,6 +71,7 @@ def display_map_swipe(map_secrets, layer1_name, layer2_name, layer1_url, layer2_
         height=500,
         center=map_secrets["coords"],
         zoom=map_secrets["zoom"],
+        key=key,
     )
 
     return folium_map
