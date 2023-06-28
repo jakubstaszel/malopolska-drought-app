@@ -4,7 +4,7 @@ import leafmap.foliumap as leafmap
 st.set_page_config(layout="wide")
 
 # Customize page title
-st.title("Drought Monitoring for Malopolska region")
+st.title("Drought Monitoring for Malopolska Region")
 st.subheader(
     "Drought have severe consequences for ecosystems, agriculture, economies, and human well-being. Monitoring drought conditions is crucial and here is why:"
 )

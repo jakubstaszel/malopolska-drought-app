@@ -50,7 +50,7 @@ layers = list(available_layers.keys())
 if not "layer" in st.session_state:
     st.session_state["layer"] = layers[len(layers) - 1]
 
-st.subheader(f"{index_name} Spatial Variability")
+st.subheader(f"{index_name} Spatio-temporal Variability")
 widget = st.empty()
 
 if st.button("Next layer"):
