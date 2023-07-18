@@ -9,7 +9,7 @@ from imagery.imagery_files import get_available_layers
 from imagery.display_map import display_map_swipe
 from imagery.stats import get_stats
 
-title: Final = "Compare Different Map Layers"
+title: Final = "Compare Different Dates for Index"
 
 st.cache_data(ttl=3600)
 

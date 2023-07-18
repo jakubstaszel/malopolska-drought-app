@@ -219,3 +219,31 @@ def get_available_layers():
     }
 
     return data
+
+
+def get_cdi_layers():
+    data = {
+        "2018-04-20": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20180421_t_epsg3857_malopolskaMasked_cog.tif",
+        "2018-06-19": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20180621_t_epsg3857_malopolskaMasked_cog.tif",
+        "2018-08-23": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20180821_t_epsg3857_malopolskaMasked_cog.tif",
+        "2018-11-06": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20181111_t_epsg3857_malopolskaMasked_cog.tif",
+        "2019-03-31": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20190401_t_epsg3857_malopolskaMasked_cog.tif",
+        "2019-06-09": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20190611_t_epsg3857_malopolskaMasked_cog.tif",
+        "2019-08-28": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20190901_t_epsg3857_malopolskaMasked_cog.tif",
+        "2019-10-27": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20191101_t_epsg3857_malopolskaMasked_cog.tif",
+        "2020-04-09": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20200411_t_epsg3857_malopolskaMasked_cog.tif",
+        "2020-06-13": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20200611_t_epsg3857_malopolskaMasked_cog.tif",
+        "2020-08-22": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20200821_t_epsg3857_malopolskaMasked_cog.tif",
+        "2020-11-25": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20201121_t_epsg3857_malopolskaMasked_cog.tif",
+        "2021-04-09": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20210411_t_epsg3857_malopolskaMasked_cog.tif",
+        "2021-06-18": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20210621_t_epsg3857_malopolskaMasked_cog.tif",
+        "2021-09-06": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20210811_t_epsg3857_malopolskaMasked_cog.tif",
+        "2021-10-31": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20211101_t_epsg3857_malopolskaMasked_cog.tif",
+        "2022-03-25": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20220321_t_epsg3857_malopolskaMasked_cog.tif",
+        "2022-06-03": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20220601_t_epsg3857_malopolskaMasked_cog.tif",
+        "2022-08-27": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20220901_t_epsg3857_malopolskaMasked_cog.tif",
+        "2022-10-31": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20221101_t_epsg3857_malopolskaMasked_cog.tif",
+        "2023-04-23": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20230421_t_epsg3857_malopolskaMasked_cog.tif",
+        "2023-06-03": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20230601_t_epsg3857_malopolskaMasked_cog.tif",
+    }
+    return data
