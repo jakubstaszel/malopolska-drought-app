@@ -247,3 +247,31 @@ def get_cdi_layers():
         "2023-06-03": "https://magisterkacog.blob.core.windows.net/cdi/cdinx_m_euu_20230601_t_epsg3857_malopolskaMasked_cog.tif",
     }
     return data
+
+
+def get_nmdi_interp_layers():
+    data = {
+        "2018-04-20": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1524222305_date20180420_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2018-06-19": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1529409970_date20180619_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2018-08-23": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1535026814_date20180823_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2018-11-06": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1541504000_date20181106_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2019-03-31": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1554038435_date20190331_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2019-06-09": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1560086411_date20190609_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2019-08-28": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1566998359_date20190828_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2019-10-27": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1572179688_date20191027_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2020-04-09": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1586435646_date20200409_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2020-06-13": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1592051473_date20200613_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2020-08-22": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1598097205_date20200822_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2020-11-25": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1606305611_date20201125_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2021-04-09": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1617970075_date20210409_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2021-06-18": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1624018240_date20210618_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2021-09-06": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1630928054_date20210906_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2021-10-31": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1635682987_date20211031_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2022-03-25": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1648214410_date20220325_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2022-06-03": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1654256162_date20220603_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2022-08-27": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1661610415_date20220827_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2022-10-31": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1667214872_date20221031_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2023-04-23": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1682222431_date20230423_cloudsMasked_aoiMasked_interp_classified.tif",
+        "2023-06-03": "https://magisterkacog.blob.core.windows.net/interpnmdi/nmdi_epoch1685800256_date20230603_cloudsMasked_aoiMasked_interp_classified.tif",
+    }
+    return data
