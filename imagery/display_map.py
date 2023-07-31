@@ -68,7 +68,7 @@ def display_map_swipe_meteo(
     folium_map = st_folium(
         m,
         width=None,
-        height=600,
+        height=500,
         center=map_secrets["coords"],
         zoom=map_secrets["zoom"],
         key=key,
