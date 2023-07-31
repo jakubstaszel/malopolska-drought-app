@@ -15,7 +15,7 @@ from imagery.display_map import display_map_swipe_meteo
 from imagery.stats import get_means_normalized
 
 index: Final = "nmdi_interp"
-title: Final = "Interpreted Normalized Multi-band Drought Index"
+title: Final = "Interpreted NMDI"
 index_name: Final = "NMDI Interpreted"
 
 
@@ -26,7 +26,7 @@ def get_means_normalized_cache():
 st.title(title)
 
 st.write(
-    "Values of NMDI were interpreted according to the classification proposed in the arcticle Remote Sensing of Soil and Vegetation Moisture from Space for Monitoring Drought and Forest Fire Events by Lingli Wang, John J. Qu and Xianjun Hao (DOI: [10.1201/b11279-27](http://dx.doi.org/10.1201/b11279-27))."
+    "Values of Normalized Multi-band Drought Index were interpreted according to the classification proposed in the arcticle Remote Sensing of Soil and Vegetation Moisture from Space for Monitoring Drought and Forest Fire Events by Lingli Wang, John J. Qu and Xianjun Hao (DOI: [10.1201/b11279-27](http://dx.doi.org/10.1201/b11279-27))."
 )
 st.write("Classification: ")
 col1 = "Vegetation - NDVI > 0.4"
@@ -57,12 +57,12 @@ if not "map_secrets" in st.session_state:
 
 
 available_layers = get_nmdi_interp_layers()
-layers = list(available_layers.keys())
+layers = list(available_layers["nmdi_interp"].keys())
 
 if not "date" in st.session_state:
     st.session_state["date"] = layers[len(layers) - 1]
 
-st.subheader("Share of Pixels Indicating Drought")
+st.subheader("Share of Pixels Indicating Drought Across Time")
 st.write(
     "For CDI - share of pixels with class Warning or Alert. For NMDI Interpreted - share of pixels with class Dry or Very Dry."
 )
@@ -91,7 +91,7 @@ data["CDI"] = [
     0.012718600953895072,
     0.4944356120826709,
 ]
-data["NMDI Interp"] = [
+data["NMDI Interp 20 m"] = [
     0.13990857016276603,
     0.053164892734017526,
     0.11922936143273741,
@@ -115,30 +115,68 @@ data["NMDI Interp"] = [
     0.6902790728800099,
     0.22830149297714955,
 ]
-st.line_chart(data[["CDI", "NMDI Interp"]])
+
+data["NMDI Interp 5 km"] = [
+    0.03002309468822171,
+    0.0024096385542168677,
+    0.046189376443418015,
+    0.018475750577367205,
+    0.22685185185185186,
+    0.006944444444444444,
+    0.016166281755196306,
+    0.018518518518518517,
+    0.10392609699769054,
+    0.004618937644341801,
+    0.013856812933025405,
+    0.1320754716981132,
+    0.23433874709976799,
+    0.0023094688221709007,
+    0.002304147465437788,
+    0.1175115207373272,
+    1.0,
+    0.07852193995381063,
+    0.34651162790697676,
+    0.9953596287703016,
+    0.969047619047619,
+    0.07834101382488479,
+]
+
+st.line_chart(data[["CDI", "NMDI Interp 20 m", "NMDI Interp 5 km"]])
 
 with st.form("compare_map_form"):
-    st.session_state["date"] = st.selectbox(
-        label="Choose date",
-        options=layers,
-        index=len(layers) - 1,
-    )
-
     generate = st.form_submit_button("Generate")
+
+    row1_col1, row1_col2 = st.columns([1, 4])
+    with row1_col1:
+        st.session_state["date"] = st.selectbox(
+            label="Choose date",
+            options=layers,
+            index=len(layers) - 1,
+        )
+    with row1_col2:
+        versions_dict = {
+            "NMDI Interp Downscaled 5 Km": "nmdi_interp_5km",
+            "NMDI Interp 20 M": "nmdi_interp",
+        }
+        nmdi_version = st.selectbox(
+            label="Choose version of interpreted NMDI", options=versions_dict, index=0
+        )
+
     if generate:
         row2_col1, row2_col2 = st.columns([7, 1])
+        st.header(nmdi_version)
         with row2_col1:
             row3_col1, row3_col2 = st.columns([1, 1])
             with row3_col1:
-                st.subheader("NMDI Interpreted")
+                st.subheader(nmdi_version)
             with row3_col2:
                 st.subheader("CDI")
-            map_var_name = f"map_nmdi_interp_cdi_{st.session_state.date}"
+            map_var_name = f"map_nmdi_interp_cdi_{st.session_state.date}_{versions_dict[nmdi_version]}"
             map = display_map_swipe_meteo(
                 st.session_state.map_secrets,
-                "nmdi_interp" + "_" + st.session_state.date,
+                versions_dict[nmdi_version] + "_" + st.session_state.date,
                 "cdi" + "_" + st.session_state.date,
-                available_layers[st.session_state.date],
+                available_layers[versions_dict[nmdi_version]][st.session_state.date],
                 get_cdi_layers()[st.session_state.date],
                 nmdi_interp_colormap(),
                 cdi_colormap(),
