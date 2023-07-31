@@ -4,7 +4,7 @@ import streamlit as st
 import leafmap.foliumap as leafmap
 from streamlit_folium import st_folium
 
-from imagery.colormaps import get_colormap, get_legend_colormap
+from imagery.colormaps import get_colormap, get_legend_colormap, index_names
 from imagery.imagery_files import get_available_layers
 from imagery.display_map import display_map_swipe
 from imagery.stats import get_stats
@@ -79,6 +79,11 @@ with st.form("compare_map_form"):
     if generate:
         row2_col1, row2_col2 = st.columns([7, 1])
         with row2_col1:
+            row3_col1, row3_col2 = st.columns([1,1])
+            with row3_col1:
+                st.subheader(f"{index_names[st.session_state.index_for_compare]} - {st.session_state.layer1}")
+            with row3_col2:
+                st.subheader(f"{index_names[st.session_state.index_for_compare]} - {st.session_state.layer2}")
             map_var_name = f"map_{st.session_state.index_for_compare}_{st.session_state.layer1}_{st.session_state.layer2}"
             map = display_map_swipe(
                 st.session_state.map_secrets,

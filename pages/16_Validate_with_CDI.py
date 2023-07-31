@@ -14,7 +14,7 @@ from imagery.imagery_files import get_available_layers, get_cdi_layers
 from imagery.display_map import display_map_swipe_meteo
 from imagery.stats import get_stats
 
-title: Final = "Compare Chosen Index with CDI"
+title: Final = "Validation using Combined Drought Indicator"
 
 
 def get_layers_cache():

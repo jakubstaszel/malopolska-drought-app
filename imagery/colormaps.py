@@ -24,6 +24,23 @@ classes: Final = {
     "msi": [0.0, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0],
 }
 
+index_names: Final = {
+    "cdom": "CDOM",
+    "chla": "Chl A",
+    "cya": "Cyanobacteria",
+    "doc": "DOC",
+    "turb": "Turbidity",
+    "ndwi1": "NDWI v1",
+    "ndwi2": "NDWI v2",
+    "nmdi": "NMDI",
+    "ndmi": "NDMI",
+    "ndvi": "NDVI",
+    "wdrvi": "WDRVI",
+    "evi": "EVI",
+    "msavi2": "MSAVI2",
+    "msi": "MSI",
+}
+
 
 def get_colormap():
     data = {}
@@ -46,22 +63,6 @@ def get_colormap():
 
 def get_legend_colormap():
     colormaps = get_colormap()
-    index_names = {
-        "cdom": "CDOM",
-        "chla": "Chl A",
-        "cya": "Cyanobacteria",
-        "doc": "DOC",
-        "turb": "Turbidity",
-        "ndwi1": "NDWI v1",
-        "ndwi2": "NDWI v2",
-        "nmdi": "NMDI",
-        "ndmi": "NDMI",
-        "ndvi": "NDVI",
-        "wdrvi": "WDRVI",
-        "evi": "EVI",
-        "msavi2": "MSAVI2",
-        "msi": "MSI",
-    }
 
     data = {}
     for index in classes.keys():
@@ -113,7 +114,7 @@ def cdi_colormap():
 
 def cdi_legend_colormap():
     colormap = cdi_colormap()
-    index_names = {
+    index_names_cdi = {
         "cdi": "CDI",
     }
     index = "cdi"
@@ -125,7 +126,7 @@ def cdi_legend_colormap():
     fig, ax = plt.subplots(figsize=(1, 4))
     norm = mpl.colors.Normalize(vmin=min(classes[index]), vmax=max(classes[index]))
     col_map = mpl.colors.ListedColormap(
-        name=index_names[index], colors=list(colors), N=no_classes
+        name=index_names_cdi[index], colors=list(colors), N=no_classes
     )
     cb = mpl.colorbar.ColorbarBase(ax, norm=norm, cmap=col_map)
 
@@ -169,7 +170,7 @@ def nmdi_interp_colormap():
 
 def nmdi_interp_legend_colormap():
     colormap = nmdi_interp_colormap()
-    index_names = {
+    index_names_interp = {
         "nmdi_interp": "NMDI Interpreted",
     }
     index = "nmdi_interp"
@@ -181,7 +182,7 @@ def nmdi_interp_legend_colormap():
     fig, ax = plt.subplots(figsize=(1, 4))
     norm = mpl.colors.Normalize(vmin=min(classes[index]), vmax=max(classes[index]))
     col_map = mpl.colors.ListedColormap(
-        name=index_names[index], colors=list(colors), N=no_classes
+        name=index_names_interp[index], colors=list(colors), N=no_classes
     )
     cb = mpl.colorbar.ColorbarBase(ax, norm=norm, cmap=col_map)
 
