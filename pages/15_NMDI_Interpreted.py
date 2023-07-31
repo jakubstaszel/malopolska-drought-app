@@ -164,7 +164,6 @@ with st.form("compare_map_form"):
 
     if generate:
         row2_col1, row2_col2 = st.columns([7, 1])
-        st.header(nmdi_version)
         with row2_col1:
             row3_col1, row3_col2 = st.columns([1, 1])
             with row3_col1:
