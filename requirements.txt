@@ -1,5 +1,6 @@
 leafmap
 streamlit
+geopandas
 numpy
 matplotlib
 streamlit_folium
