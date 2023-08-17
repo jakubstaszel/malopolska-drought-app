@@ -140,8 +140,17 @@ data["NMDI Interp 5 km"] = [
     0.969047619047619,
     0.07834101382488479,
 ]
-
-st.line_chart(data[["CDI", "NMDI Interp 20 m", "NMDI Interp 5 km"]])
+data.rename(
+    columns={
+        "NMDI Interp 20 m": "1 NMDI Interp 20 m",
+        "NMDI Interp 5 km": "2 NMDI Interp 5 km",
+        "CDI": "3 CDI",
+    },
+    inplace=True,
+)
+st.line_chart(
+    data[["1 NMDI Interp 20 m", "2 NMDI Interp 5 km", "3 CDI"]],
+)
 
 with st.form("compare_map_form"):
     generate = st.form_submit_button("Generate")

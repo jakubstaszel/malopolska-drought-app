@@ -1,4 +1,7 @@
 import pandas as pd
+import datetime as dt
+
+from pathlib import Path
 
 
 def get_stats():
@@ -473,3 +476,69 @@ def get_means_normalized():
     }
 
     return pd.DataFrame.from_dict(data, orient="index")
+
+
+def get_normalized_means_before_after():
+    data = get_means_normalized()
+    before_after = []
+    for index in data.keys():
+        before = []
+        after = []
+        for date, row in data[index].iteritems():
+            date = dt.datetime.strptime(date, "%Y-%m-%d")
+            if date.month in [8, 9]:
+                boundary = dt.datetime.strptime("2022-01-01", "%Y-%m-%d")
+                if date >= boundary:
+                    after.append(row)
+                else:
+                    before.append(row)
+        before_after.append(
+            {
+                "Index": index,
+                "Date": "2 - After 2022-01",
+                "Average Index Value": sum(after) / len(after),
+            }
+        )
+        before_after.append(
+            {
+                "Index": index,
+                "Date": "1 - Before 2022-01",
+                "Average Index Value": sum(before) / len(before),
+            }
+        )
+    # pd.DataFrame(before_after).to_excel(Path(r"C:\Users\jas\malopolska-drought-app\period3.xlsx"))
+    return pd.DataFrame(before_after)
+
+
+def get_normalized_means_periods():
+    data = get_means_normalized()
+    periods = []
+    for index in data.keys():
+        p1 = []
+        p2 = []
+        p3 = []
+        p4 = []
+        for date, row in data[index].iteritems():
+            date = dt.datetime.strptime(date, "%Y-%m-%d")
+            if date.month in [3, 4]:
+                p1.append(row)
+            if date.month in [6]:
+                p2.append(row)
+            if date.month in [8, 9]:
+                p3.append(row)
+            if date.month in [10, 11]:
+                p4.append(row)
+        periods.append(
+            {"Index": index, "Period": "P1", "Average Index Value": sum(p1) / len(p1)}
+        )
+        periods.append(
+            {"Index": index, "Period": "P2", "Average Index Value": sum(p2) / len(p2)}
+        )
+        periods.append(
+            {"Index": index, "Period": "P3", "Average Index Value": sum(p3) / len(p3)}
+        )
+        periods.append(
+            {"Index": index, "Period": "P4", "Average Index Value": sum(p4) / len(p4)}
+        )
+    # pd.DataFrame(before_after).to_excel(Path(r"C:\Users\jas\malopolska-drought-app\period3.xlsx"))
+    return pd.DataFrame(periods)

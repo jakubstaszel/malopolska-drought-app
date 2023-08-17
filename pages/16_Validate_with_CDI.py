@@ -2,7 +2,6 @@ from typing import Final
 
 import streamlit as st
 import leafmap.foliumap as leafmap
-from streamlit_folium import st_folium
 
 from imagery.colormaps import (
     get_colormap,
@@ -12,7 +11,6 @@ from imagery.colormaps import (
 )
 from imagery.imagery_files import get_available_layers, get_cdi_layers
 from imagery.display_map import display_map_swipe_meteo
-from imagery.stats import get_stats
 
 title: Final = "Validation using Combined Drought Indicator"
 

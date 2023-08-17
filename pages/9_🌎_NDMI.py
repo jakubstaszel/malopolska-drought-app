@@ -13,21 +13,29 @@ title: Final = "Normalized Difference Moisture Index"
 index_name: Final = "NDMI"
 
 st.cache_data(ttl=3600)
+
+
 def get_stats_cache():
     return get_stats()
 
 
 st.cache_data(ttl=3600)
+
+
 def get_layers_cache():
     return get_available_layers()
 
 
 st.cache_data(ttl=3600)
+
+
 def get_colormap_cache():
     return get_colormap()
 
 
 st.cache_data(ttl=3600)
+
+
 def get_legend_cache():
     return get_legend_colormap()
 
